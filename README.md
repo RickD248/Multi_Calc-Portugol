@@ -1,2 +1,2 @@
 # Multi_Calc-Portugol
- my code from a few months ago in Portuguol pseudo-code, made in "VisualG 2.5"
+ My code from a few months ago in Portugol pseudo-code, made in "VisualG 2.5"

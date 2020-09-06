@@ -1,0 +1,1102 @@
+algoritmo "MULT-CALC"
+
+// Função : Multi-Calculadora
+// Autor : ~RickD248~
+// Data : <10/05/2020 ~ 11/05/2020>
+
+var
+
+//opcoes bonus
+
+ata: caracter
+numeroai, tabuadakk, respondiai, opcaoplus, tutor1: inteiro
+
+//correcao tabuada
+
+opcao3, restab, tab, numb: inteiro
+
+//base de tudo
+
+opcao1: inteiro
+
+//opcoes 1 a 3
+
+op, n3, n4, r, t, ale: inteiro
+n1, n2, res: real
+
+//opcoes 4+
+
+nota: vetor [1..8] de real
+notat: vetor [1..4] de real
+media: vetor [1..4] de real
+soma: vetor [1..4] de real
+so_me: real
+res_so_me: real
+opcao2: inteiro
+re, d, dv:real
+
+inicio
+
+// escolha de calc ou tab
+
+escreval ("  __  __          _   _     _          ___          _      ")
+escreval (" |  \/  |  _  _  | | | |_  (_)  ___   / __|  __ _  | |  __ ")
+escreval (" | |\/| | | || | | | |  _| | | |___| | (__  / _` | | | / _|")
+escreval (" |_|  |_|  \_,_| |_|  \__| |_|        \___| \__,_| |_| \__|")
+escreval (" __   __               __        __  ")
+escreval (" \ \ / /  _ _         / /       /  \ ")
+escreval ("  \ V /  | '_|  _    / _ \  _  | () |")
+escreval ("   \_/   |_|   (_)   \___/ (_)  \__/ ")
+
+
+escreval (" ")
+escreval ("Oq deseja usar?")
+escreval (" ")
+escreval ("[1]Calculadora")
+escreval ("[2]Tabuada")
+escreval ("[3]Gerador de numeros aleatorios")
+escreval ("[4]Media")
+escreval ("[5]Conversao $-R$ / R$-$")
+escreval (" ")
+escreval ("*MAIS OPCOES*")
+escreval (" ")
+escreval ("[6]Creditos")
+escreval ("[7]Tutoriais")
+escreval ("[8]Mini-Game")
+escreval ("[9]Cancelar")
+
+escreval (" ")
+
+escreva ("~")
+leia (opcao1)
+
+limpatela
+
+// opcao calculadora
+
+se opcao1 = 1 entao
+
+   escreval ("     _____              _         _____   _    _         ")
+   escreval ("    / ____|     /\     | |       / ____| | |  | |        ")
+   escreval ("   | |         /  \    | |      | |      | |  | |        ")
+   escreval ("   | |        / /\ \   | |      | |      | |  | |        ")
+   escreval ("   | |____   / ____ \  | |____  | |____  | |__| |        ")
+   escreval ("    \_____| /_/    \_\ |______|  \_____|  \____/         ")
+   escreval (" _                   _____     ____    _____             ")
+   escreval ("| |          /\     |  __ \   / __ \  |  __ \      /\    ")
+   escreval ("| |         /  \    | |  | | | |  | | | |__) |    /  \   ")
+   escreval ("| |        / /\ \   | |  | | | |  | | |  _  /    / /\ \  ")
+   escreval ("| |____   / ____ \  | |__| | | |__| | | | \ \   / ____ \ ")
+   escreval ("|______| /_/    \_\ |_____/   \____/  |_|  \_\ /_/    \_\")
+
+   escreval (" ")
+   escreval ("digite um número")
+   leia (n1)
+
+   limpatela
+
+   // operaçoes escolhas
+
+   escreval ("                           __       _    ")
+   escreval ("    _                     / /    /\| |/\ ")
+   escreval ("  _| |_     ______       / /     \ ` ' / ")
+   escreval (" |_   _|   |______|     / /     |_     _|")
+   escreval ("   |_|                 / /       / , . \ ")
+   escreval ("                      /_/        \/|_|\/ ")
+   escreval (" ")
+
+   escreval ("digite a operação desejada")
+   escreval ("[1] adição")
+   escreval ("[2] subtração")
+   escreval ("[3] multiplicação")
+   escreval ("[4] divisão")
+   escreval (" ")
+   escreva ("sua resposta: ")
+   leia (op)
+
+   limpatela
+
+   escreval ("   _____              _         _____   _    _ ")
+   escreval ("  / ____|     /\     | |       / ____| | |  | |")
+   escreval (" | |         /  \    | |      | |      | |  | |")
+   escreval (" | |        / /\ \   | |      | |      | |  | |")
+   escreval (" | |____   / ____ \  | |____  | |____  | |__| |")
+   escreval ("  \_____| /_/    \_\ |______|  \_____|  \____/ ")
+   escreval (" _                   _____     ____    _____             ")
+   escreval ("| |          /\     |  __ \   / __ \  |  __ \      /\    ")
+   escreval ("| |         /  \    | |  | | | |  | | | |__) |    /  \   ")
+   escreval ("| |        / /\ \   | |  | | | |  | | |  _  /    / /\ \  ")
+   escreval ("| |____   / ____ \  | |__| | | |__| | | | \ \   / ____ \ ")
+   escreval ("|______| /_/    \_\ |_____/   \____/  |_|  \_\ /_/    \_\")
+   escreval (" ")
+   escreval ("digite outro número")
+   leia (n2)
+
+   limpatela
+
+   //operaçoes escolhidas
+
+   se (op = 1) entao
+      res <- n1 + n2
+
+      escreval (" ______ ")
+      escreval ("|______|")
+      escreval (" ______ ")
+      escreval ("|______|")
+      escreval (" ")
+
+      escreval ("RESULTADO:")
+      escreval (n1, " + ", n2, " = ", res)
+   senao
+
+      se (op = 2) entao
+         res <- n1 - n2
+
+         escreval (" ______ ")
+         escreval ("|______|")
+         escreval (" ______ ")
+         escreval ("|______|")
+         escreval (" ")
+
+         escreval ("RESULTADO:")
+         escreval (n1, " - ", n2, " = ", res)
+      senao
+
+         se (op = 3) entao
+            res <- n1 * n2
+
+            escreval (" ______ ")
+            escreval ("|______|")
+            escreval (" ______ ")
+            escreval ("|______|")
+            escreval (" ")
+
+            escreval ("RESULTADO:")
+            escreval (n1, " * ", n2, " = ", res)
+         senao
+
+            se (op = 4) entao
+               res <- n1 / n2
+
+               escreval (" ______ ")
+               escreval ("|______|")
+               escreval (" ______ ")
+               escreval ("|______|")
+               escreval (" ")
+
+               escreval ("RESULTADO:")
+               escreval (n1, " : ", n2, " = ", res)
+            senao
+
+            fimse
+         fimse
+      fimse
+   fimse
+
+senao
+
+   // opcao tabuada 2.0
+
+   se opcao1 = 2 entao
+
+      escreval (" ___ ____ ___  _  _ ____ ___  ____ ")
+      escreval ("  |  |__| |__] |  | |__| |  \ |__| ")
+      escreval ("  |  |  | |__] |__| |  | |__/ |  | ")
+      escreval (" ")
+
+      escreval ("ESCOLHA OQUE DESEJA QUE O COMPURTADOR REALIZE")
+      escreval ("[1] Tabuada do 1")
+      escreval ("[2] Tabuada do 2")
+      escreval ("[3] Tabuada do 3")
+      escreval ("[4] Tabuada do 4")
+      escreval ("[5] Tabuada do 5")
+      escreval ("[6] Tabuada do 6")
+      escreval ("[7] Tabuada do 7")
+      escreval ("[8] Tabuada do 8")
+      escreval ("[9] Tabuada do 9")
+      escreval ("[10] Tabuada do 10")
+      escreval ("[11] Tabuada personalizada")
+      leia (opcao3)
+
+      limpatela
+
+      //tabuada 1-5
+
+      se opcao3 = 1 entao
+         numb <- 1
+         escreval ("========================================")
+         escreval ("=   ==   ======================   ==   =")
+         escreval ("==  ==  ========================  ==  ==")
+         escreval ("==  ==  =========  ==  =========  ==  ==")
+         escreval ("===    ===========    ===========    ===")
+         escreval ("====  ==========        ==========  ====")
+         escreval ("===    ===========    ===========    ===")
+         escreval ("==  ==  =========  ==  =========  ==  ==")
+         escreval ("==  ==  ========================  ==  ==")
+         escreval ("=  ====  ======================  ====  =")
+         escreval ("========================================")
+         escreval (" ")
+         escreval ("TABUADA DO ", numb)
+         escreval (" ")
+         para tab de 1 ate 10 faca
+            restab <- tab * numb
+            escreval (numb, " * ", tab, " = ", restab)
+         fimpara
+      senao
+
+         se opcao3 = 2 entao
+            numb <- 2
+            escreval ("========================================")
+            escreval ("=   ==   ======================   ==   =")
+            escreval ("==  ==  ========================  ==  ==")
+            escreval ("==  ==  =========  ==  =========  ==  ==")
+            escreval ("===    ===========    ===========    ===")
+            escreval ("====  ==========        ==========  ====")
+            escreval ("===    ===========    ===========    ===")
+            escreval ("==  ==  =========  ==  =========  ==  ==")
+            escreval ("==  ==  ========================  ==  ==")
+            escreval ("=  ====  ======================  ====  =")
+            escreval ("========================================")
+            escreval (" ")
+            escreval ("TABUADA DO ", numb)
+            escreval (" ")
+            para tab de 1 ate 10 faca
+               restab <- tab * numb
+               escreval (numb, " * ", tab, " = ", restab)
+            fimpara
+         senao
+
+            se opcao3 = 3 entao
+               numb <- 3
+               escreval ("========================================")
+               escreval ("=   ==   ======================   ==   =")
+               escreval ("==  ==  ========================  ==  ==")
+               escreval ("==  ==  =========  ==  =========  ==  ==")
+               escreval ("===    ===========    ===========    ===")
+               escreval ("====  ==========        ==========  ====")
+               escreval ("===    ===========    ===========    ===")
+               escreval ("==  ==  =========  ==  =========  ==  ==")
+               escreval ("==  ==  ========================  ==  ==")
+               escreval ("=  ====  ======================  ====  =")
+               escreval ("========================================")
+               escreval (" ")
+               escreval ("TABUADA DO ", numb)
+               escreval (" ")
+               para tab de 1 ate 10 faca
+                  restab <- tab * numb
+                  escreval (numb, " * ", tab, " = ", restab)
+               fimpara
+            senao
+
+               se opcao3 = 4 entao
+                  numb <- 4
+                  escreval ("========================================")
+                  escreval ("=   ==   ======================   ==   =")
+                  escreval ("==  ==  ========================  ==  ==")
+                  escreval ("==  ==  =========  ==  =========  ==  ==")
+                  escreval ("===    ===========    ===========    ===")
+                  escreval ("====  ==========        ==========  ====")
+                  escreval ("===    ===========    ===========    ===")
+                  escreval ("==  ==  =========  ==  =========  ==  ==")
+                  escreval ("==  ==  ========================  ==  ==")
+                  escreval ("=  ====  ======================  ====  =")
+                  escreval ("========================================")
+                  escreval (" ")
+                  escreval ("TABUADA DO ", numb)
+                  escreval (" ")
+                  para tab de 1 ate 10 faca
+                     restab <- tab * numb
+                     escreval (numb, " * ", tab, " = ", restab)
+                  fimpara
+               senao
+
+                  se opcao3 = 5 entao
+                     numb <- 5
+                     escreval ("========================================")
+                     escreval ("=   ==   ======================   ==   =")
+                     escreval ("==  ==  ========================  ==  ==")
+                     escreval ("==  ==  =========  ==  =========  ==  ==")
+                     escreval ("===    ===========    ===========    ===")
+                     escreval ("====  ==========        ==========  ====")
+                     escreval ("===    ===========    ===========    ===")
+                     escreval ("==  ==  =========  ==  =========  ==  ==")
+                     escreval ("==  ==  ========================  ==  ==")
+                     escreval ("=  ====  ======================  ====  =")
+                     escreval ("========================================")
+                     escreval (" ")
+                     escreval ("TABUADA DO ", numb)
+                     escreval (" ")
+                     para tab de 1 ate 10 faca
+                        restab <- tab * numb
+                        escreval (numb, " * ", tab, " = ", restab)
+                     fimpara
+                  senao
+
+                     //tabuada 6-10
+
+                     se opcao3 = 6 entao
+                        numb <- 6
+                        escreval ("========================================")
+                        escreval ("=   ==   ======================   ==   =")
+                        escreval ("==  ==  ========================  ==  ==")
+                        escreval ("==  ==  =========  ==  =========  ==  ==")
+                        escreval ("===    ===========    ===========    ===")
+                        escreval ("====  ==========        ==========  ====")
+                        escreval ("===    ===========    ===========    ===")
+                        escreval ("==  ==  =========  ==  =========  ==  ==")
+                        escreval ("==  ==  ========================  ==  ==")
+                        escreval ("=  ====  ======================  ====  =")
+                        escreval ("========================================")
+                        escreval (" ")
+                        escreval ("TABUADA DO ", numb)
+                        escreval (" ")
+                        para tab de 1 ate 10 faca
+                           restab <- tab * numb
+                           escreval (numb, " * ", tab, " = ", restab)
+                        fimpara
+                     senao
+
+                        se opcao3 = 7 entao
+                           numb <- 7
+                           escreval ("========================================")
+                           escreval ("=   ==   ======================   ==   =")
+                           escreval ("==  ==  ========================  ==  ==")
+                           escreval ("==  ==  =========  ==  =========  ==  ==")
+                           escreval ("===    ===========    ===========    ===")
+                           escreval ("====  ==========        ==========  ====")
+                           escreval ("===    ===========    ===========    ===")
+                           escreval ("==  ==  =========  ==  =========  ==  ==")
+                           escreval ("==  ==  ========================  ==  ==")
+                           escreval ("=  ====  ======================  ====  =")
+                           escreval ("========================================")
+                           escreval (" ")
+                           escreval ("TABUADA DO ", numb)
+                           escreval (" ")
+                           para tab de 1 ate 10 faca
+                              restab <- tab * numb
+                              escreval (numb, " * ", tab, " = ", restab)
+                           fimpara
+                        senao
+
+                           se opcao3 = 8 entao
+                              numb <- 8
+                              escreval ("========================================")
+                              escreval ("=   ==   ======================   ==   =")
+                              escreval ("==  ==  ========================  ==  ==")
+                              escreval ("==  ==  =========  ==  =========  ==  ==")
+                              escreval ("===    ===========    ===========    ===")
+                              escreval ("====  ==========        ==========  ====")
+                              escreval ("===    ===========    ===========    ===")
+                              escreval ("==  ==  =========  ==  =========  ==  ==")
+                              escreval ("==  ==  ========================  ==  ==")
+                              escreval ("=  ====  ======================  ====  =")
+                              escreval ("========================================")
+                              escreval (" ")
+                              escreval ("TABUADA DO ", numb)
+                              escreval (" ")
+                              para tab de 1 ate 10 faca
+                                 restab <- tab * numb
+                                 escreval (numb, " * ", tab, " = ", restab)
+                              fimpara
+                           senao
+
+                              se opcao3 = 9 entao
+                                 numb <- 9
+                                 escreval ("========================================")
+                                 escreval ("=   ==   ======================   ==   =")
+                                 escreval ("==  ==  ========================  ==  ==")
+                                 escreval ("==  ==  =========  ==  =========  ==  ==")
+                                 escreval ("===    ===========    ===========    ===")
+                                 escreval ("====  ==========        ==========  ====")
+                                 escreval ("===    ===========    ===========    ===")
+                                 escreval ("==  ==  =========  ==  =========  ==  ==")
+                                 escreval ("==  ==  ========================  ==  ==")
+                                 escreval ("=  ====  ======================  ====  =")
+                                 escreval ("========================================")
+                                 escreval (" ")
+                                 escreval ("TABUADA DO ", numb)
+                                 escreval (" ")
+                                 para tab de 1 ate 10 faca
+                                    restab <- tab * numb
+                                    escreval (numb, " * ", tab, " = ", restab)
+                                 fimpara
+                              senao
+
+                                 se opcao3 = 10 entao
+                                    numb <- 10
+                                    escreval ("========================================")
+                                    escreval ("=   ==   ======================   ==   =")
+                                    escreval ("==  ==  ========================  ==  ==")
+                                    escreval ("==  ==  =========  ==  =========  ==  ==")
+                                    escreval ("===    ===========    ===========    ===")
+                                    escreval ("====  ==========        ==========  ====")
+                                    escreval ("===    ===========    ===========    ===")
+                                    escreval ("==  ==  =========  ==  =========  ==  ==")
+                                    escreval ("==  ==  ========================  ==  ==")
+                                    escreval ("=  ====  ======================  ====  =")
+                                    escreval ("========================================")
+                                    escreval (" ")
+                                    escreval ("TABUADA DO ", numb)
+                                    escreval (" ")
+                                    para tab de 1 ate 10 faca
+                                       restab <- tab * numb
+                                       escreval (numb, " * ", tab, " = ", restab)
+                                    fimpara
+                                 senao
+
+
+
+                                 fimse
+                              fimse
+                           fimse
+                        fimse
+                     fimse
+                  fimse
+               fimse
+            fimse
+         fimse
+      fimse
+   fimse
+
+   se opcao3 = 11 entao
+
+      escreval ("==============================")
+      escreval ("=   ==   =============      ==")
+      escreval ("==  ==  =============  ====  =")
+      escreval ("==  ==  =============  ====  =")
+      escreval ("===    ====        =======  ==")
+      escreval ("====  ===================  ===")
+      escreval ("===    ====        =====  ====")
+      escreval ("==  ==  ======================")
+      escreval ("==  ==  ================  ====")
+      escreval ("=  ====  ===============  ====")
+      escreval ("==============================")
+      escreval (" ")
+      escreval ("digite um numero para ser a base da tabuada")
+      leia (n3)
+
+      limpatela
+
+      escreval ("========================================")
+      escreval ("=   ==   ======================   ==   =")
+      escreval ("==  ==  ========================  ==  ==")
+      escreval ("==  ==  =========  ==  =========  ==  ==")
+      escreval ("===    ===========    ===========    ===")
+      escreval ("====  ==========        ==========  ====")
+      escreval ("===    ===========    ===========    ===")
+      escreval ("==  ==  =========  ==  =========  ==  ==")
+      escreval ("==  ==  ========================  ==  ==")
+      escreval ("=  ====  ======================  ====  =")
+      escreval ("========================================")
+      escreval (" ")
+
+      escreval ("TABUDA DO ", n3)
+      escreval (" ")
+
+      para t de 1 ate 25 faca
+         r <- n3 * t
+         escreval (n3, " * ", t, " = ", r)
+      fimpara
+
+   senao
+   fimse
+
+   // opcao R.A.N.D.O.M
+
+   se opcao1 = 3 entao
+
+      escreval (" ______       ____        __      _   ______       ____       __    __   ")
+      escreval ("(   __ \     (    )      /  \    / ) (_  __ \     / __ \      \ \  / /   ")
+      escreval (" ) (__) )    / /\ \     / /\ \  / /    ) ) \ \   / /  \ \     () \/ ()   ")
+      escreval ("(    __/    ( (__) )    ) ) ) ) ) )   ( (   ) ) ( ()  () )    / _  _ \   ")
+      escreval (" ) \ \  _    )    (    ( ( ( ( ( (     ) )  ) ) ( ()  () )   / / \/ \ \  ")
+      escreval ("( ( \ \_))  /  /\  \   / /  \ \/ /    / /__/ /   \ \__/ /   /_/      \_\ ")
+      escreval (" )_) \__/  /__(  )__\ (_/    \__/    (______/     \____/   (/          \)")
+
+      escreval (" ")
+      escreval ("digite um limite para o computador")
+      escreval ("exemplo: 0 - ...")
+      leia (n4)
+
+      ale <- randi(n4)
+      escreval ("seu número é: ", ale)
+   fimse
+
+   // opcao media
+
+   //media info
+
+   se opcao1 = 4 entao
+
+      escreval ("NOTAS DO BIMESTRE 1")
+      escreval ("digite a primeira nota")
+      leia (nota[1])
+      escreval ("digite a segunda nota")
+      leia (nota[2])
+      escreval ("digite a nota dos trabalhos + tarefa + preseça")
+      leia (notat[1])
+      soma[1] <- nota[1] + nota[2] + notat[1]
+      media [1] <- soma[1] / 3
+      escreval ("sua primeira media é ", media [1])
+
+      limpatela
+
+      escreval ("NOTAS DO BIMESTRE 2")
+      escreval ("digite a primeira nota")
+      leia (nota[3])
+      escreval ("digite a segunda nota")
+      leia (nota[4])
+      escreval ("digite a nota dos trabalhos + tarefa + preseça")
+      leia (notat[2])
+      soma[2] <- nota[3] + nota[4] + notat[2]
+      media [2] <- soma[2] / 3
+      escreval ("sua primeira media é ", media [2])
+
+      limpatela
+
+      escreval ("NOTAS DO BIMESTRE 3")
+      escreval ("digite a primeira nota")
+      leia (nota[5])
+      escreval ("digite a segunda nota")
+      leia (nota[6])
+      escreval ("digite a nota dos trabalhos + tarefa + preseça")
+      leia (notat[3])
+      soma[3] <- nota[5] + nota[6] + notat[3]
+      media [3] <- soma[3] / 3
+      escreval ("sua primeira media é ", media [3])
+
+      limpatela
+
+      escreval ("NOTAS DO BIMESTRE 4")
+      escreval ("digite a primeira nota")
+      leia (nota[7])
+      escreval ("digite a segunda nota")
+      leia (nota[8])
+      escreval ("digite a nota dos trabalhos + tarefa + preseça")
+      leia (notat[4])
+      soma[4] <- nota[7] + nota[8] + notat[4]
+      media [4] <- soma[4] / 3
+      escreval ("sua primeira media é ", media [4])
+
+      limpatela
+
+      // media resultado final
+
+      so_me <- media[1] + media[2] + media[3] + media[4]
+      res_so_me <- so_me / 4
+      escreval ("  ____            _          _     _              ")
+      escreval (" |  _ \          | |        | |   (_)             ")
+      escreval (" | |_) |   ___   | |   ___  | |_   _   _ __ ___   ")
+      escreval (" |  _ <   / _ \  | |  / _ \ | __| | | | '_ ` _ \  ")
+      escreval (" | |_) | | (_) | | | |  __/ | |_  | | | | | | | | ")
+      escreval (" |____/   \___/  |_|  \___|  \__| |_| |_| |_| |_| ")
+
+      escreval (" ")
+      escreval ("suas 4 medias: ")
+      escreval (" ")
+
+      escreval ("NOTAS DO BIMESTRE 1")
+      escreval (media[1])
+      se media[1] < 6 entao
+         escreval ("Voce tera q fazer o exame de recuperaçao!")
+      senao
+         escreval ("Parabéns! vc foi aprovado este bimestre!")
+      fimse
+
+      escreval (" ")
+
+      escreval ("NOTAS DO BIMESTRE 2")
+      escreval (media[2])
+      se media[2] < 6 entao
+         escreval ("Voce tera q fazer o exame de recuperaçao!")
+      senao
+         escreval ("Parabéns! vc foi aprovado este bimestre!")
+      fimse
+
+      escreval (" ")
+
+      escreval ("NOTAS DO BIMESTRE 3")
+      escreval (media[3])
+      se media[3] < 6 entao
+         escreval ("Voce tera q fazer o exame de recuperaçao!")
+      senao
+         escreval ("Parabéns! vc foi aprovado este bimestre!")
+      fimse
+
+      escreval (" ")
+
+      escreval ("NOTAS DO BIMESTRE FINAL (4)")
+      escreval (media[4])
+      se media[4] < 6 entao
+         escreval ("Voce tera q fazer o exame de recuperaçao!")
+      senao
+         escreval ("Parabéns! vc foi aprovado este bimestre!")
+      fimse
+
+      escreval (" ")
+
+      escreval (" ")
+      escreval ("Media dos bimestres:")
+      escreval (res_so_me)
+      se res_so_me < 6 entao
+         escreval ("Você foi reprovado!")
+      senao
+         escreval ("Você passou de ano!")
+      fimse
+   senao
+
+
+      // opcao conversao
+
+      se opcao1 = 5 entao
+
+         escreval ("    ____   __              __  ")
+         escreval ("   / __ \_/ /            _/ /  ")
+         escreval ("  / /_/ / __/  ______   / __/  ")
+         escreval (" / _, _(_  )  /_____/  (_  )   ")
+         escreval ("/_/ |_/  _/           /  _/    ")
+         escreval ("      /_/             /_/      ")
+         escreval (" ")
+         escreval ("      __             ____   __ ")
+         escreval ("    _/ /            / __ \_/ / ")
+         escreval ("   / __/  ______   / /_/ / __/ ")
+         escreval ("  (_  )  /_____/  / _, _(_  )  ")
+         escreval (" /  _/           /_/ |_/  _/   ")
+         escreval (" /_/                   /_/     ")
+         escreval (" ")
+
+         escreval ("vc prefere saber:")
+         escreval (" ")
+         escreval ("[1] $ - R$")
+         escreval ("[2] R$ - $")
+         escreval (" ")
+         leia (opcao2)
+
+         limpatela
+
+         se opcao2 = 1 entao
+
+            escreval ("      __             ____   __ ")
+            escreval ("    _/ /            / __ \_/ / ")
+            escreval ("   / __/  ______   / /_/ / __/ ")
+            escreval ("  (_  )  /_____/  / _, _(_  )  ")
+            escreval (" /  _/           /_/ |_/  _/   ")
+            escreval (" /_/                   /_/     ")
+            escreval (" ")
+
+            escreval ("digite o valor atual do dolar")
+            leia (dv)
+            escreval ("de dolar para real, qual a quantidade q qr converter?")
+            leia (d)
+            re <- d * dv
+            escreval ("Resultado: R$", re)
+         senao
+
+            se opcao2 = 2 entao
+
+               escreval ("    ____   __              __  ")
+               escreval ("   / __ \_/ /            _/ /  ")
+               escreval ("  / /_/ / __/  ______   / __/  ")
+               escreval (" / _, _(_  )  /_____/  (_  )   ")
+               escreval ("/_/ |_/  _/           /  _/    ")
+               escreval ("      /_/             /_/      ")
+               escreval (" ")
+
+               escreval ("digite o valor atual do dolar")
+               leia (dv)
+               escreval ("de real para dolar, qual a quantidade q qr converter?")
+               leia (re)
+               d <- re/dv
+               escreval ("Resultado: $", d)
+            senao
+
+            fimse
+         fimse
+      fimse
+   fimse
+
+   //opcao creditos
+
+   se opcao1 = 6 entao
+
+      escreval ("           _______  ______   _______        _______  _______  _______            ")
+      escreval ("          (  ___  )(  ___ \ (  ____ \      (  ____ )(  ___  )(  ____ )           ")
+      escreval ("          | (   ) || (   ) )| (    \/      | (    )|| (   ) || (    )|           ")
+      escreval ("          | |   | || (__/ / | |            | (____)|| |   | || (____)|           ")
+      escreval ("          | |   | ||  __ (  | | ____       |  _____)| |   | ||     __)           ")
+      escreval ("          | |   | || (  \ \ | | \_  )      | (      | |   | || (\ (              ")
+      escreval ("          | (___) || )___) )| (___) |      | )      | (___) || ) \ \__           ")
+      escreval ("          (_______)|/ \___/ (_______)      |/       (_______)|/   \__/           ")
+      escreval ("                                                                                 ")
+      escreval ("   _______  _______        _______ _________          ______   _______  _______  ")
+      escreval ("  (       )(  ____ \      (  ___  )\__    _/|\     /|(  __  \ (  ___  )(  ____ ) ")
+      escreval ("  | () () || (    \/      | (   ) |   )  (  | )   ( || (  \  )| (   ) || (    )| ")
+      escreval ("  | || || || (__          | (___) |   |  |  | |   | || |   ) || (___) || (____)| ")
+      escreval ("  | |(_)| ||  __)         |  ___  |   |  |  | |   | || |   | ||  ___  ||     __) ")
+      escreval ("  | |   | || (            | (   ) |   |  |  | |   | || |   ) || (   ) || (\ (    ")
+      escreval ("  | )   ( || (____/\      | )   ( ||\_)  )  | (___) || (__/  )| )   ( || ) \ \__ ")
+      escreval ("  |/     \|(_______/      |/     \|(____/   (_______)(______/ |/     \||/   \__/ ")
+      escreval ("                                                                                 ")
+      escreval ("                                                                                 ")
+      escreval ("                                Criado por RickD248                              ")
+      escreval ("                            com 1102 linhas de códigos                           ")
+      escreval ("                        do dia 10/05/2020 ao dia 13/05/2020                      ")
+      escreval ("                                                                                 ")
+   senao
+   fimse
+fimse
+
+//opcao cancelar
+
+se opcao1 = 9 entao
+   escreval (" ")
+   escreval (" ################################################################################")
+   escreval ("  ######     ##    ##    ##  ######  ####### ##          ##    #######   ####### ")
+   escreval (" ##    ##   ####   ###   ## ##    ## ##      ##         ####   ##    ## ##     ##")
+   escreval (" ##        ##  ##  ####  ## ##       ##      ##        ##  ##  ##    ## ##     ##")
+   escreval (" ##       ##    ## ## ## ## ##       #####   ##       ##    ## ##    ## ##     ##")
+   escreval (" ##       ######## ##  #### ##       ##      ##       ######## ##    ## ##     ##")
+   escreval (" ##    ## ##    ## ##   ### ##    ## ##      ##       ##    ## ##    ## ##     ##")
+   escreval ("  ######  ##    ## ##    ##  ######  ####### ######## ##    ## #######   ####### ")
+   escreval (" ################################################################################")
+   escreval (" ")
+   escreval (" ")
+   escreval (" ")
+   escreval ("                            pode fechar a janela                                 ")
+senao
+
+   // opcao PLUS (+)
+   // chapter 1: escolha s/n
+
+   se opcao1 = 7 entao
+
+      escreval ("   __  ")
+      escreval (" _ \ \ ")
+      escreval ("(_) | |")
+      escreval ("    | |")
+      escreval (" _  | |")
+      escreval ("(_) | |")
+      escreval ("   /_/")
+
+      escreval (" ")
+      escreval ("estas são opcoes bonus! :)")
+      escreval ("eu gostei mt de trabalhar nisso, entao acho que vc tbm pode gostar")
+      escreval ("portanto, vou deixar um tutorial basico de como usar o visualg")
+      escreval ("Vc quer aprender algo?")
+      escreval (" ")
+      escreval ("[1] sim")
+      escreval ("[2] nao")
+      escreval (" ")
+      leia (opcaoplus)
+
+      limpatela
+
+      // opcao PLUS (+) RESP NO
+
+      se opcaoplus = 2 entao
+         escreval (" ")
+         escreval ("Se quiser usar funçoes anteriores, vc pode fechar")
+         escreval ("esta janela e abrir o progama novamente")
+      senao
+
+         // chapter 2: escolhas tutorial
+
+         se opcaoplus = 1 entao
+
+            escreval (".___________. __    __  .___________.  ______  ")
+            escreval ("|           ||  |  |  | |           | /  __  \ ")
+            escreval ("`---|  |----`|  |  |  | `---|  |----`|  |  |  |")
+            escreval ("    |  |     |  |  |  |     |  |     |  |  |  |")
+            escreval ("    |  |     |  `--'  |     |  |     |  `--'  |")
+            escreval ("    |__|      \______/      |__|      \______/ ")
+            escreval ("   .______       __       ___       __         ")
+            escreval ("   |   _  \     |  |     /   \     |  |        ")
+            escreval ("   |  |_)  |    |  |    /  ^  \    |  |        ")
+            escreval ("   |      /     |  |   /  /_\  \   |  |        ")
+            escreval ("   |  |\  \     |  |  /  _____  \  |  `----.   ")
+            escreval ("   | _| `._|    |__| /__/     \__\ |_______|   ")
+            escreval (" ")
+            escreval ("oq deseja saber?")
+            escreval (" ")
+            escreval ("[1]como declarar variaveis")
+            escreval ("[2]como usar a funçao escreval")
+            escreval ("[3]como usar a funcao leia")
+            escreval ("[4]como criar escolhas")
+            escreval ("[5]como economizar codigos com a funcao para..faca")
+            escreval ("[6]definir valores ás variaveis pela programaçao")
+            escreval ("[7]fazer o computador realizar calculos")
+            escreval ("[8]saiba mais")
+            escreval ("[9]cancelar")
+            escreval (" ")
+            leia (tutor1)
+
+            limpatela
+
+            // chapter 2.1: tutor var
+
+            se tutor1 = 1 entao
+               escreval ("**********************************************************************************")
+               escreval (" ")
+               escreval ("Para declarar variaveis vc escreverá o nome da variavel e seu tipo na seçao var")
+               escreval (" ")
+               escreval ("variaveis nao podem iniciar com seus nomes por números")
+               escreval ("para saber o tipo de variavel desejada para a funçao que quer criar")
+               escreval (" ")
+               escreval ("vc digitara:")
+               escreval (" ")
+               escreval ("var1:")
+               escreval (" ")
+               escreval ("logo após coloque seu tipo, os tipos sao: ")
+               escreval (" ")
+               escreval ("logico: para variaveis sendo: verdadeiro ou falso")
+               escreval ("caracter: aceita qualquer caracetere, incluindo numeros, letras e simbolos")
+               escreval ("inteiro: para variaveis com numeros que nao possuem virgula")
+               escreval ("real: para variaveis com apenas numeros que podem possuir virgula")
+               escreval (" ")
+               escreval ("**********************************************************************************")
+            senao
+
+               // chapter 2.2: tutor escreval
+
+               se tutor1 = 2 entao
+                  escreval ("**********************************************************************************")
+                  escreval (" ")
+                  escreval ("A funçao escreval se trata de pedor para o  computador falar algo")
+                  escreval ("voce pode depois de ter definido uma variavel dizer: ")
+                  escreval (" ")
+                  escreval ("escreval (var1)")
+                  escreval (" ")
+                  escreval ("se a variavel obteve seu valor definida, quando vc iniciar o programa ele")
+                  escreval ("digitará o valor da variavel")
+                  escreval ("se quiser fazer com que o programa escreva algo nao predefinido, como")
+                  escreval ("um texto, como oq vc está lendo, coloque o texto entre aspas, simulando")
+                  escreval ("uma frase dita por outra pessoa")
+                  escreval (" ")
+                  escreval ("**********************************************************************************")
+               senao
+
+                  // chapter 2.3: func leia
+
+                  se tutor1 = 3 entao
+                     escreval ("**********************************************************************************")
+                     escreval (" ")
+                     escreval ("Leia é a funçao que vc vai usar para que o usuario faça respostas, e essas")
+                     escreval ("respostas seram dados que vão ser armazenados nas variaveis, um exemplo, foi")
+                     escreval ("quando vc respondeu com numeros as opçoes do que vc ia fazer neste programa")
+                     escreval (" ")
+                     escreval ("exemplo: ")
+                     escreval ("leia (var1)")
+                     escreval (" ")
+                     escreval ("**********************************************************************************")
+                  senao
+
+                     // chapter 2.4: como criar escolhas
+
+                     se tutor1 = 4 entao
+                        escreval ("**********************************************************************************")
+                        escreval (" ")
+                        escreval ("Para criar escolhas, como nesse programa, vc deve usar a estrutura ''se..senao'' ")
+                        escreval ("por exemplo:")
+                        escreval (" ")
+                        escreval ("se <Variavel> <Expressao Logica> entao")
+                        escreval ("escreval (''<variavel> *** *****'')")
+                        escreval ("senao")
+                        escreval ("escreval (''<variavel> *** *****'')")
+                        escreval ("fimse")
+                        escreval (" ")
+                        escreval ("expressao logica seria ''var1 <> (diferente) 6''")
+                        escreval ("as expressoes logicas podem ser:")
+                        escreval ("< (menor), > (maior), = (igual), <> (diferente)")
+                        escreval (">= ( +r ou igual) e <= ( -r ou igual)")
+                        escreval (" ")
+                        escreval (" ")
+                        escreval ("     (vc tbm pode nn escrever ''fimse'' e deixar o ''senao'' vazio, e continuar")
+                        escreval ("     com outro ''se..senao'', criando 2 ou mais escolhas, observe o codigo desse")
+                        escreval ("                    programa para ter um exemplo na pratica)")
+                        escreval (" ")
+                        escreval ("**********************************************************************************")
+                     senao
+
+                        // chapter 2.5: funcao para..faca
+
+                        se tutor1 = 5 entao
+                           escreval ("**********************************************************************************")
+                           escreval (" ")
+                           escreval ("Para economizar codigo, vc pode usar a funcao de repeticao ''para..faca'', na qual")
+                           escreval ("conssiste em repetir um bloco de comandos mudando apenas uma variavel")
+                           escreval (" ")
+                           escreval ("exemplo:")
+                           escreval ("para tabuada (var) de 1 (primeira var q repetirá) ate 10 (ultima var q repetirá")
+                           escreval ("resposta <- basetabuada * tabuada")
+                           escreval ("escreval (basetabuada, '' X '', tabuada, '' = '', resposta)")
+                           escreval ("fimpara")
+                           escreval (" ")
+                           escreval ("**********************************************************************************")
+                        senao
+
+                           // chapter 2.6: "var <- x"
+
+                           se tutor1 = 6 entao
+                              escreval ("**********************************************************************************")
+                              escreval (" ")
+                              escreval ("Para definir o valor de uma variavel sem usar o ''leia (var1)'', vc pode usar o: ")
+                              escreval (" ")
+                              escreval ("var1 <- 5")
+                              escreval ("ou")
+                              escreval ("var3 <- var1 + var2")
+                              escreval (" ")
+                              escreval ("**********************************************************************************")
+                           senao
+
+                              // chapter 2.7: fazer o computador realizar calculos
+
+                              se tutor1 = 7 entao
+                                 escreval ("**********************************************************************************")
+                                 escreval (" ")
+                                 escreval ("Para fazer com que o computador realize calculos de acordo com a escolha de numeros
+                                 escreval ("e operaçoes escolhidas pelo usuario, basta usar o se..senao, para armazenar escolhas
+                                 escreval ("do usuario em variaveis que serao usadas para calcular o resultado final")
+                                 escreval (" ")
+                                 escreval ("Com o se..senao, vc pode fazer com que dependendo das escolhas do usuario, o")
+                                 escreval ("computador realize comandos expecificos, se quiser ter um exemplo pratico, veja o")
+                                 escreval ("codigo que criei para simular uma calculadora (tambem usei na tabuada)")
+                                 escreval (" ")
+                                 escreval ("**********************************************************************************")
+                              senao
+
+                                 // chapter 2.8: saiba mais
+
+                                 se tutor1 = 8 entao
+                                    escreval ("**********************************************************************************")
+                                    escreval (" ")
+                                    escreval ("Sim! VisualG é bem simples, mas tem mais funçoes, e se vc quer se especializar em")
+                                    escreval ("programaçao, recomendo começar com a linguagem portugol, é a bem facil de entender")
+                                    escreval ("e compreender a logica de programação, para ter mais informaçoes, faça o curso")
+                                    escreval ("gratuito do senai (EAD), no qual vc precisa no minimo: ")
+                                    escreval (" ")
+                                    escreval ("ter 14 anos,")
+                                    escreval ("ter completado 6 ano do fundamental,")
+                                    escreval ("e ter acesso a um computador para usar o visualg (pode ser ate windows xp)")
+                                    escreval (" ")
+                                    escreval ("Você pode entrar no link a seguir e se inscrever:")
+                                    escreval ("online.sp.senai.br/institucional/3722/3840/cursos-gratuitos")
+                                    escreval (" ")
+                                    escreval ("**********************************************************************************")
+                                 senao
+
+                                    // chapter final (2.9): CANCELAR
+
+                                    se tutor1 = 9 entao
+                                       escreval (" ")
+                                       escreval (" ################################################################################")
+                                       escreval ("  ######     ##    ##    ##  ######  ####### ##          ##    #######   ####### ")
+                                       escreval (" ##    ##   ####   ###   ## ##    ## ##      ##         ####   ##    ## ##     ##")
+                                       escreval (" ##        ##  ##  ####  ## ##       ##      ##        ##  ##  ##    ## ##     ##")
+                                       escreval (" ##       ##    ## ## ## ## ##       #####   ##       ##    ## ##    ## ##     ##")
+                                       escreval (" ##       ######## ##  #### ##       ##      ##       ######## ##    ## ##     ##")
+                                       escreval (" ##    ## ##    ## ##   ### ##    ## ##      ##       ##    ## ##    ## ##     ##")
+                                       escreval ("  ######  ##    ## ##    ##  ######  ####### ######## ##    ## #######   ####### ")
+                                       escreval (" ################################################################################")
+                                       escreval (" ")
+                                       escreval (" ")
+                                       escreval (" ")
+                                       escreval ("                            pode fechar a janela                                 ")
+                                    senao
+
+                                    fimse
+                                 fimse
+                              fimse
+                           fimse
+                        fimse
+                     fimse
+                  fimse
+               fimse
+            fimse
+         fimse
+      fimse
+   fimse
+
+   //MINI-GAME TABUADA
+
+   se opcao1 = 8 entao
+      escreval ("   _____   .__         .__            ________                          ")
+      escreval ("  /     \  |__|  ____  |__|          /  _____/ _____     _____    ____  ")
+      escreval (" /  \ /  \ |  | /    \ |  |  ______ /   \  ___ \__  \   /     \ _/ __ \ ")
+      escreval ("/    Y    \|  ||   |  \|  | /_____/ \    \_\  \ / __ \_|  Y Y  \\  ___/ ")
+      escreval ("\____|__  /|__||___|  /|__|          \______  /(____  /|__|_|  / \___  >")
+      escreval ("        \/          \/                      \/      \/       \/      \/ ")
+      escreval (" ")
+
+      escreval ("digite um numero para ser a base da tabuada no mini-game")
+      leia (numeroai)
+      escreval (" ")
+      limpatela
+
+      para tabuadakk de 1 ate 10 faca
+         repita
+
+            limpatela
+            escreval ("   _____   .__         .__            ________                          ")
+            escreval ("  /     \  |__|  ____  |__|          /  _____/ _____     _____    ____  ")
+            escreval (" /  \ /  \ |  | /    \ |  |  ______ /   \  ___ \__  \   /     \ _/ __ \ ")
+            escreval ("/    Y    \|  ||   |  \|  | /_____/ \    \_\  \ / __ \_|  Y Y  \\  ___/ ")
+            escreval ("\____|__  /|__||___|  /|__|          \______  /(____  /|__|_|  / \___  >")
+            escreval ("        \/          \/                      \/      \/       \/      \/ ")
+            escreval ("                               TABUADA                                  ")
+
+            escreval ("quanto é", numeroai, " X ", tabuadakk, " ? ")
+            leia (respondiai)
+
+            se respondiai = numeroai * tabuadakk entao
+               escreval ("Parabéns! Está correto!")
+               escreval (numeroai, " X ", tabuadakk, " = ", numeroai * tabuadakk)
+               escreval (" ")
+            senao
+
+               se respondiai <> numeroai * tabuadakk entao
+                  escreval (" ")
+                  escreval ("Errado! Tente novamente!")
+                  escreval (" ")
+                  escreval ("[enter] ok, vou tentar novamente")
+                  leia (ata)
+               senao
+
+               fimse
+            fimse
+
+         ate (respondiai = numeroai * tabuadakk )
+         limpatela
+      fimpara
+      escreval ("_________ _______  ______            _______  ______   _______ ")
+      escreval ("\__   __/(  ___  )(  ___ \ |\     /|(  ___  )(  __  \ (  ___  )")
+      escreval ("   ) (   | (   ) || (   ) )| )   ( || (   ) || (  \  )| (   ) |")
+      escreval ("   | |   | (___) || (__/ / | |   | || (___) || |   ) || (___) |")
+      escreval ("   | |   |  ___  ||  __ (  | |   | ||  ___  || |   | ||  ___  |")
+      escreval ("   | |   | (   ) || (  \ \ | |   | || (   ) || |   ) || (   ) |")
+      escreval ("   | |   | )   ( || )___) )| (___) || )   ( || (__/  )| )   ( |")
+      escreval ("   )_(   |/     \||/ \___/ (_______)|/     \|(______/ |/     \|")
+      escreval (" _______  _______  _______  _______  _        _______  ")
+      escreval ("(  ____ \(  ___  )(       )(  ____ )( \      (  ____ \ ")
+      escreval ("| (    \/| (   ) || () () || (    )|| (      | (    \/ ")
+      escreval ("| |      | |   | || || || || (____)|| |      | (__     ")
+      escreval ("| |      | |   | || |(_)| ||  _____)| |      |  __)    ")
+      escreval ("| |      | |   | || |   | || (      | |      | (       ")
+      escreval ("| (____/\| (___) || )   ( || )      | (____/\| (____/\ ")
+      escreval ("(_______/(_______)|/     \||/       (_______/(_______/ ")
+      escreval ("_________ _______  ______   _______ ")
+      escreval ("\__   __/(  ___  )(  __  \ (  ___  )")
+      escreval ("   ) (   | (   ) || (  \  )| (   ) |")
+      escreval ("   | |   | (___) || |   ) || (___) |")
+      escreval ("   | |   |  ___  || |   | ||  ___  |")
+      escreval ("   | |   | (   ) || |   ) || (   ) |")
+      escreval ("   | |   | )   ( || (__/  )| )   ( |")
+      escreval ("   )_(   |/     \|(______/ |/     \|")
+
+      escreval (" ")
+
+      escreval ("Parabéns! Você concluiu a tabuada do ", numeroai)
+
+   fimse
+fimse
+
+fimalgoritmo
